@@ -24,6 +24,7 @@ CreateThread(function()
                     if type(v.prop) == "table" then
                         for kk, vv in pairs(v.prop) do
                             campfire = DoesObjectOfTypeExistAtCoords(Coords.x, Coords.y, Coords.z,   Config.Distances.campfire, GetHashKey(vv), false)
+                            if campfire then break end
                         end
                         if not campfire then break end
                     else
